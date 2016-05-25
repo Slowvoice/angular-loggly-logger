@@ -200,6 +200,14 @@
           return token;
         };
 
+        var inputTag = function(usrTag) {
+            if (angular.isDefined(usrTag)) {
+                tag = usrTag;
+            }
+
+            return tag;
+        };
+
         return {
           lastLog: function(){ return lastLog; },
           sendConsoleErrors: function(){ return sendConsoleErrors; },
@@ -210,6 +218,7 @@
           sendMessage: sendMessage,
           logToConsole: logToConsole,
           inputToken: inputToken,
+          inputTag: inputTag,
 
           /**
            * Get or set the fields to be sent with all logged events.
